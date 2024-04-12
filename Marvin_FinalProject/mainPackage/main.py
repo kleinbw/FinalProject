@@ -25,5 +25,7 @@ print(values)
 #EXTRACTING RAW ENCRYPTION DATA
 Encrypted = readJSON("TeamsAndEncryptedMessagesForDistribution - 002.json")
 Encrypted = Encrypted["Marvin"]
+Encrypted = str(Encrypted)
 print(Encrypted) #Can be deleted
-    
+
+print(decryption(Encrypted))   

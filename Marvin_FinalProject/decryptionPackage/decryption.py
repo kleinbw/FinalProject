@@ -3,8 +3,9 @@ Created on Apr 10, 2024
 
 @author: kleinbw
 '''
-#import cryptography.fernet as crypt
+import cryptography.fernet 
 import json
+from cryptography.fernet import Fernet
 
 def readJSON(fileName):
         '''
@@ -14,5 +15,9 @@ def readJSON(fileName):
         
         return json.load(open(fileName))
 
-#def decryption():
+def decryption(token):
+    f = Fernet('KUtHo1Xqsa2L__6ODtD86Tj-_f5A4nsLvvuUjA2FMmE=')
+    return f.decrypt(token)
+    
+
     
