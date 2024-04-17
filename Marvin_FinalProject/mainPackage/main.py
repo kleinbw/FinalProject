@@ -1,31 +1,22 @@
-'''
-Created on Apr 10, 2024
-
-@author: kleinbw
-'''
+# Name: Ben Klein, TJ Harrington, Ryan Wilkins
+# email: kleinbw@mail.uc.edu
+# Assignment Number: Final Project
+# Due Date: 4/23/24
+# Course/Section: IS 4010-002
+# Semester/Year: Spring 2024
+# Brief Description of the assignment: In the final project, we are in a group working together to decipher a code that will reveal a location on campus for us to find
+# Brief Description of what this module does. This is the main module and in here all of our code runs. this is where we determine what the decryption is 
+# Citations: 
 
 from decryptionPackage.decryption import *
+from functionsPackage.functions import *
 from txtPackage.txt import *
 
+if __name__ == "__main__":
 
-Data = readJSON("EncryptedGroupHints Spring 2024 Section 002.json")
-Marvin = Data["Marvin"]
-print(Marvin) #Can be deleted
-#Creating a DF For the words 
-words = read_words_from_file("UCEnglish.txt")
-
-
-#CREATING LOOP WILL LIKELY BE ABLE TO BE FUNCTIOn - Lets try to move this into a function
-values = []
-for x in Marvin:
-    y = int(x)
-    values.append(words[y])
-print(values)
-
-#EXTRACTING RAW ENCRYPTION DATA
-Encrypted = readJSON("TeamsAndEncryptedMessagesForDistribution - 002.json")
-Encrypted = Encrypted["Marvin"]
-Encrypted = str(Encrypted)
-print(Encrypted) #Can be deleted
-
-print(decryption(Encrypted))   
+    #EXTRACTING RAW ENCRYPTION DATA
+    Encrypted = readJSON("TeamsAndEncryptedMessagesForDistribution - 002.json")
+    Encrypted = Encrypted["Marvin"]
+    Encrypted = str(Encrypted)
+    
+    print(decryption(Encrypted))   
