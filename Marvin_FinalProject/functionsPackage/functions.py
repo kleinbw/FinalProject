@@ -19,12 +19,12 @@ def decrypt_Marvin(data, words):
         y = int(x)
         decrypted_values.append(words[y])
     return decrypted_values
-
-Data = readJSON("EncryptedGroupHints Spring 2024 Section 002.json")
-Marvin = Data["Marvin"]
-print(Marvin) #Can be deleted
-#Creating a DF For the words 
-words = read_words_from_file("UCEnglish.txt")
-
-decrypted_values = decrypt_Marvin(Marvin, words)
-print(decrypted_values)
+    
+    Data = readJSON("EncryptedGroupHints Spring 2024 Section 002.json")
+    Marvin = Data["Marvin"]
+    print(Marvin) #Can be deleted
+    #Creating a DF For the words 
+    words = read_words_from_file("UCEnglish.txt")
+    
+    decrypted_values = decrypt_Marvin(Marvin, words)
+    print(decrypted_values)
