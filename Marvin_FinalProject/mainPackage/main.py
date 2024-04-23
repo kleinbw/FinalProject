@@ -14,6 +14,10 @@ from txtPackage.txt import *
 from PIL import Image
 
 if __name__ == "__main__":
+    Data = readJSON("EncryptedGroupHints Spring 2024 Section 002.json")
+    Marvin = Data["Marvin"]
+    words = read_words_from_file("UCEnglish.txt")
+    print(decrypt_Marvin(Marvin, words))
 
     #EXTRACTING RAW ENCRYPTION DATA
     Encrypted = readJSON("TeamsAndEncryptedMessagesForDistribution - 002.json")
