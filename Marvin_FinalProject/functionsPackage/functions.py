@@ -15,6 +15,10 @@ from PIL import Image
 from decryptionPackage.decryption import *
 from txtPackage.txt import *
 def decrypt_Marvin(data, words):
+   '''
+    Input - String that contains encrypted Message & Text Library
+    Return - A dictionary that contains a  message
+   '''
    decrypted_values = []
    for x in data:
        y = int(x)

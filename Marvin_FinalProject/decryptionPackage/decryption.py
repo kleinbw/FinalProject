@@ -21,6 +21,10 @@ def readJSON(fileName):
         return json.load(open(fileName))
 
 def decryption(token):
+    '''
+    Input - A token that is required by fernet to decrypt the message
+    Return - a fernet key that uses the token input
+    '''
     f = Fernet('KUtHo1Xqsa2L__6ODtD86Tj-_f5A4nsLvvuUjA2FMmE=')
     return f.decrypt(token)
     
